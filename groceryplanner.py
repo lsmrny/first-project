@@ -15,10 +15,10 @@ if askremove.lower() == "yes":
     print("type 'done' when you're finished :)")
     while True:
         itemremoved = input(f"Item : ")
-        if itemremoved in groceries_list:
-            groceries_list.remove(itemremoved)
         if itemremoved.lower() == "done":
             break
+        if itemremoved in groceries_list:
+            groceries_list.remove(itemremoved)
     print()
 else:
     print()
