@@ -21,6 +21,7 @@ def trip_summary(name, city, days, activity, rating):
     print(f"Hey {name}, your {days} days trip to {city} sounds really fun!")
     print(f"{activity} sounds amazing, i should also go try that sometime!")
     print(f"Rating : {'🔥' * rating} ({rating}/5)")
+    print()
 all_trips = []
 while True:
     name, city, days, activity, rating = user_input()
@@ -28,7 +29,7 @@ while True:
     cont = input("Do you want to input more trips? (yes/no) ")
     if cont.lower() == "no":
         break
-    while cont.lower() != "yes" and "no":
+    while cont.lower() not in ["yes", "no"]:
         cont = input("PLease only use (yes/no), Do you want to input more trips? ")
 print()
 print(f"\n---ALL TRIPS SUMMARY---")
